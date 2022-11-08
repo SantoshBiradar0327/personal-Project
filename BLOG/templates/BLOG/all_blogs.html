@@ -1,0 +1,14 @@
+{% extends 'Information/base.html' %}
+
+{%block content %}
+THIS IS ALL BLOG PAGE
+<h2>Santosh has written {{bLoG.count}} Blog{{bLoG.count|pluralize}}</h2>
+{% for x in bLoG %}
+<a href="{% url 'BLOG:detail' x.id %}"><h1>{{x.title}}</h1></a>
+<p>{{x.description|truncatechars:100}}</p>
+{{x.date|date:'M d Y'|upper}}
+<br>
+<br>
+
+{% endfor %}
+{% endblock %}

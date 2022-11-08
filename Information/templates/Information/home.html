@@ -1,0 +1,27 @@
+{% extends 'Information/base.html' %}
+
+{%block content %}
+    <h1>SANTOSH'S PORTFOLIO</h1>
+
+    {% load static %}
+    <a href="{% url 'BLOG:all_blogs' %}">ALL BLOGS</a>
+    <img src="{% static 'Information/DSC_0439.JPG' %}" height=1000, width=650>
+    <h3><a href="{% static 'Information/Santosh Resume.pdf' %}">Resume</a></h3>
+    
+    {% for any in anything %}
+    
+    <h1>{{any.Name}}</h1>
+    <h2>{{any.phone_no}}</h2>
+    
+    {% if any.image %}
+    <img src="{{any.image.url}}">
+    {% endif %}
+    
+    <p>{{any.Email}}</p>
+    
+    {% endfor %}
+
+{% endblock %}
+    
+    
+
