@@ -4,3 +4,4 @@ __pycache__/
 local_settings.py
 /static/
 *.pyc
+My_Own/__pycache__/settings.cpython-310.pyc
