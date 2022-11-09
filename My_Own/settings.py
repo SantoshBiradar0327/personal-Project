@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-gcwqo^9%1q7(uz8tibdppff^0@vjjfu8c=*%uv0ysy-q!7vgwz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['santoshbiradar.pythonanywhere.com']
 
 
 # Application definition
@@ -118,10 +118,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-#MEDIA_URL should only be name in place of media it can be anything and media will become top most folder out of appname 
+STATIC_ROOT = BASE_DIR / 'static'
+
+#MEDIA_URL should only be name in place of media it can be anything and media will become top most folder out of appname
 MEDIA_URL= 'media/'
 #MEDIA_ROOT sholud inly be name
-MEDIA_ROOT = BASE_DIR / 'MEDIA'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
